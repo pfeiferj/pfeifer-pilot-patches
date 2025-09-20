@@ -1,3 +1,19 @@
+# DO NOT USE
+This will no longer meet comma's safety requirements as of October 1st, 2025.
+Comma now requires that the safety code does not break the existing unit tests
+and also requires you to unit test any additional code you add. This repo is no
+longer maintained and so will not be updated to meet these requirements. If you
+use this code after October 1st, 2025 then your device may be automatically
+banned from using Comma services.
+
+If you need an "Always On Lateral" solution then I highly recommend you look at
+Sunnypilot's "MADS" implementation which is more feature complete, has more
+safety features, is actively maintained, and meets the new Comma safety
+standards.
+
+* [Sunnypilot](https://github.com/sunnypilot/sunnypilot)
+* [Sunnypilot OpenDBC (contains safety code)](https://github.com/sunnypilot/opendbc/tree/master)
+
 # Always On Lateral
 An always on lateral implementation that allows keeping lateral controls on
 after hitting the brake or pressing the cancel button. To engage you must
@@ -7,6 +23,8 @@ pressing the cruise cancel button and disable completely when the brake is
 pressed. Can also be configured to disable when blinkers are activated.
 
 ## comma.ai requirements for panda safety modifications
+SEE NOTE ABOUT NEW REQUIREMENTS IN DO NOT USE SECTION AT TOP OF README
+
 This change requires changes to panda safety. If you make modifications to panda
 safety comma.ai states that you should not use the openpilot branding for your
 fork. This means your fork should not be named "openpilot". You can still use
@@ -25,7 +43,7 @@ However, despite that recommendation from comma.ai it's worth noting that they
 have the right to ban a device for any reason and will do so if they see a
 change that they deem to be dangerous even if it follows the iso guidelines.
 
-This code does to the best of my knowledge meet the requirements to not be
+~~This code does to the best of my knowledge meet the requirements to not be
 banned from comma.ai services and is reasonably safe to use. However, there is
 always some risk associated to modifying panda in any way and I have not tested
 these changes on all cars. If you use this code you are using it at your own
@@ -33,7 +51,7 @@ risk and the risk of anyone who installs your software. I suggest you take a
 look at the changes these patches make before using and make sure you understand
 the change. The change does not make modifications to the controls allowed state
 of the longitudinal controls, so all longitudinal behavior should remain the
-same.
+same.~~
 
 ## Cars Supported
 I have only personally tested an HKG can vehicle.
@@ -84,7 +102,7 @@ I used the following forks as references:
 * [Alexandre Sato's Fork](https://github.com/AlexandreSato/openpilot/tree/personal3)
 
 ## Status
-Beta
+DO NOT USE
 
 [Changelog](./CHANGELOG.md)
 
